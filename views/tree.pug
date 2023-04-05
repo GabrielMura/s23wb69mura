@@ -2,3 +2,9 @@ extends layout
 
 block content
   h1= title
+  -let results = [{age: 20, size: 100, name: "oak"}, {age: 30, size: 110, name: "pine"}, {age: 40, size: 120, name: "birch"}];
+
+  div(class="container-fluid")
+    div(class="row")
+      -for(let x in results)
+        div(class="col-sm-2") age: #{results[x].age} <br> size: #{results[x].size} <br> name: #{results[x].name} 
