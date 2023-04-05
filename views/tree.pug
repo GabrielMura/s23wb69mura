@@ -6,5 +6,5 @@ block content
 
   div(class="container-fluid")
     div(class="row")
-      -for(let x in results)
-        div(class="col-sm-2") age: #{results[x].age} <br> size: #{results[x].size} <br> name: #{results[x].name} 
+      each x in results
+        div(class="col-sm-2") age: #{x.age} <br> size: #{x.size} <br> name: #{x.name} 
